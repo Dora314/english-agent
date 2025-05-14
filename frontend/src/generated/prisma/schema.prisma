@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid()) // Using cuid for IDs
+  googleId  String   @unique @map("google_id") // google_id in the database
+  email     String   @unique
+  name      String? // Optional name
+  avatarUrl String?  @map("avatar_url") // avatar_url in the database
+  createdAt DateTime @default(now()) @map("created_at") // created_at in the database
+  updatedAt DateTime @updatedAt @map("updated_at") // Optional: adds an updatedAt field managed by Prisma
+
+  // Relationships (we'll add these later)
+  // userAnswers UserAnswer[]
+  // dashboardData UserDashboardData?
+  // wrongdoingQuestions UserWrongdoingQuestion[]
+}

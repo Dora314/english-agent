@@ -1,0 +1,30 @@
+# eng_mcq_platform/.gitignore
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/coverage/
+
+# Python / FastAPI
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/venv/ # In case you ever decide to use one
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+backend/models/gemma-3-1b-it-q4_0.gguf 
+
+# OS-specific
+.DS_Store
+Thumbs.db
