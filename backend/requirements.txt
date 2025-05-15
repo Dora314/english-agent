@@ -7,3 +7,8 @@ python-multipart
 prisma
 llama-cpp-python
 faiss-cpu
+sentence-transformers
+fastapi
+uvicorn
+dotenv
+prisma

@@ -10,7 +10,7 @@ llm_service_logger = logging.getLogger(__name__)  # Create a logger specific to 
 
 # --- Configuration ---
 MODEL_DIR = Path(__file__).resolve().parent.parent / "models"
-MODEL_BASENAME = "gemma-3-1b-it-q4_0.gguf"
+MODEL_BASENAME = "gemma-3-4b-it-q4_0.gguf"
 MODEL_PATH_STR = str(MODEL_DIR / MODEL_BASENAME)
 
 N_CTX_VAL = 8192
